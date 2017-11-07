@@ -5,6 +5,13 @@ import java.util.List;
 public class Imperative implements Mean {
     @Override
     public double integersMean(List<Integer> numbers) {
-        return 0;
+        if (numbers.size() == 0) return 0;
+        double sum = 0;
+        for (int number : numbers) {
+            sum += number;
+        }
+        return (sum / numbers.size());
     }
+
+
 }
